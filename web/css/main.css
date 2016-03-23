@@ -1,0 +1,39 @@
+div {
+    position: relative;
+    padding: 5px;
+    width: 250px;
+    float: left;
+    height: 1000px;
+    border-right: solid;
+    border-width: thin;
+    border-color: grey;
+    background-color: white;
+}
+.header {
+    float: none;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background-color: lightgrey;
+}
+.columns {
+    float: none;
+    width: auto;
+    top: 60px;
+}
+.column01 {
+    background-color: white;
+}
+.column02 {
+    background-color: lightblue;
+}
+.column03 {
+    left: 550px;
+    position: fixed;
+    background-color: lightgreen;
+}
+img {
+    width: 200px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+</head>
+<body>
+    <p>Choose the operation:</p>
+    <form action="calculate" id="calculate" method="get">
+        <input type="radio" name="operation" form="calculate" value="add">Addition<br>
+        <input type="radio" name="operation" form="calculate" value="mul">Multiplication<br>
+        <input type="radio" name="operation" form="calculate" value="div">Division<br>
+        <input type="radio" name="operation" form="calculate" value="sub">Subtraction<br>
+        <p><label>Value of operand1:&nbsp</label><input name="operand1" form="calculate" size="10" value="10"><br/>
+        <label>Value of operand2:&nbsp</label><input name="operand2" form="calculate" size="10" value="30"></p>
+        <p><input type="submit" form="calculate"></p>
+    </form>
+</body>
+</html>
