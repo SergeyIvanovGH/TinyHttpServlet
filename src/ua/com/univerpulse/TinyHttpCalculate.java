@@ -1,8 +1,5 @@
 package ua.com.univerpulse;
 
-/**
- * Created by svivanov on 23.03.16.
- */
 public class TinyHttpCalculate {
     private double operand1Value;
     private double operand2Value;

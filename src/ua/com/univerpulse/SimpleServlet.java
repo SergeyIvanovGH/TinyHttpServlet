@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Created by svivanov on 23.03.16.
- */
 @WebServlet(name = "SimpleServlet", urlPatterns = {"/simpleservlet"})
 public class SimpleServlet extends HttpServlet {
     @Override
