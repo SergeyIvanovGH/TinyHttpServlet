@@ -10,7 +10,6 @@ import java.io.PrintWriter;
 /**
  * Created by svivanov on 23.03.16.
  */
-//@WebServlet(name = "CalculateServlet", urlPatterns = {"/calculate"})
 public class CalculateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,24 +21,6 @@ public class CalculateServlet extends HttpServlet {
 
         resp.setContentType("text/html");
 
-        switch (operation) {
-            case "add": {
-                operation = "Addition";
-                break;
-            }
-            case "sub": {
-                operation = "Subtraction";
-                break;
-            }
-            case "mul": {
-                operation = "Multiplication";
-                break;
-            }
-            case "div": {
-                operation = "Division";
-                break;
-            }
-        }
         PrintWriter out = resp.getWriter();
         out.println("<html>");
         out.println("<body>");
@@ -48,7 +29,7 @@ public class CalculateServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h3>Request Information:</h3>");
-        out.println("<p>Operation: " + operation+"<br/>");
+        out.println("<p>Operation: " + calculate.getOperation().getShortOperationName() +"<br/>");
         out.println("Value of Operand1: " + operand1Value + "<br/>");
         out.println("Value of Operand2: " + operand2Value + "</p>");
         out.println("<p><strong>Result: " + calculate.calculate() + "</strong></p>");
