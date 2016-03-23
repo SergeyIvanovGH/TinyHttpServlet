@@ -14,8 +14,15 @@ public class CalculateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String operation = req.getParameter("operation");
-        Double operand1Value = Double.parseDouble(req.getParameter("operand1"));
-        Double operand2Value = Double.parseDouble(req.getParameter("operand2"));
+        double operand1Value = 0;
+        double operand2Value = 0;
+        try {
+            operand1Value = Double.parseDouble(req.getParameter("operand1"));
+            operand2Value = Double.parseDouble(req.getParameter("operand2"));
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return;
+        }
 
         TinyHttpCalculate calculate = new TinyHttpCalculate(operand1Value, operand2Value, operation);
 
